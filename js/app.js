@@ -1,3 +1,11 @@
+document.querySelectorAll(`
+.parents-section,
+.countdown-section,
+.banner-section,
+.event-info,
+.gallery,
+.final-section
+`)
 const eventDate = new Date(
     "August 22, 2026 15:00:00"
 ).getTime();
