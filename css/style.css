@@ -1,0 +1,738 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(180deg,
+            #eaf6ff 0%,
+            #f5fbff 20%,
+            #fff6cc 45%,
+            #f4ebff 70%,
+            #ffffff 100%);
+
+    min-height: 100vh;
+}
+
+/* ==========================
+   PANTALLA DE BIENVENIDA
+========================== */
+
+#welcomeScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background:
+        linear-gradient(180deg,
+            #dff3ff,
+            #fef7cf,
+            #f3e8ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 25px;
+}
+
+.welcome-content {
+    max-width: 800px;
+}
+
+.welcome-group {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 0px;
+}
+
+.welcome-content h1 {
+    font-size: 2rem;
+    color: #666;
+}
+
+.welcome-content h2 {
+    font-size: 3rem;
+    font-family: 'Sacramento', cursive;
+    color: #7aa5e6;
+    margin: 10px 0;
+}
+
+.welcome-content p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+#openInvitation {
+    border: none;
+    padding: 18px 35px;
+    border-radius: 40px;
+    background: #7aa5e6;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ==========================
+   CONTENIDO PRINCIPAL
+========================== */
+
+#mainContent {
+    display: none;
+}
+
+/* ==========================
+   NUBES
+========================== */
+
+.cloud {
+    position: fixed;
+    background: white;
+    border-radius: 100px;
+    opacity: .5;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud1 {
+    width: 180px;
+    height: 60px;
+    top: 80px;
+    left: -250px;
+    animation: cloudMove 35s linear infinite;
+}
+
+.cloud2 {
+    width: 220px;
+    height: 70px;
+    top: 250px;
+    left: -300px;
+    animation: cloudMove 45s linear infinite;
+}
+
+.cloud3 {
+    width: 160px;
+    height: 55px;
+    top: 500px;
+    left: -250px;
+    animation: cloudMove 55s linear infinite;
+}
+
+.cloud4 {
+    width: 250px;
+    height: 75px;
+    top: 700px;
+    left: -350px;
+    animation: cloudMove 60s linear infinite;
+}
+
+.cloud::before {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    left: 30px;
+}
+
+.cloud::after {
+    width: 90px;
+    height: 90px;
+    top: -40px;
+    right: 30px;
+}
+
+@keyframes cloudMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(1800px);
+    }
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-characters {
+    width: 100%;
+    max-width: 400px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 10px;
+}
+
+.hero-left,
+.hero-right {
+    width: 110px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-right {
+    animation-delay: 1s;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.baby-name {
+    font-size: 4rem;
+    margin: 10px 0;
+
+    background: linear-gradient(90deg,
+            #8db7ff,
+            #d6a3ff,
+            #ffd45d);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.message {
+    max-width: 500px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.group-image {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 25px;
+
+    filter:
+        drop-shadow(0 15px 20px rgba(0, 0, 0, .15));
+}
+
+.btn-scroll {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 40px;
+    background: #7aa5e6;
+    color: white;
+    cursor: pointer;
+}
+
+/* ==========================
+   COUNTDOWN
+========================== */
+
+.countdown-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.countdown-section h2 {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.box {
+    backdrop-filter: blur(15px);
+
+    background:
+        rgba(255, 255, 255, .6);
+
+    border-radius: 25px;
+
+    padding: 25px 10px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.box span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7aa5e6;
+}
+
+.box small {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banner-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-image {
+    width: 85%;
+    max-width: 320px;
+}
+
+/* ==========================
+   EVENTO
+========================== */
+
+.event-info {
+    padding: 80px 20px;
+    position: relative;
+}
+
+.event-info h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.card {
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    max-width: 700px;
+    margin: auto;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.item span {
+    font-size: 1.5rem;
+}
+
+.item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.event-layout{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.event-details{
+    width:100%;
+}
+
+.event-map{
+    width:100%;
+}
+
+.event-map iframe{
+    width:100%;
+    height:380px;
+    border:none;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Tablet */
+
+@media (max-width: 992px){
+
+    .event-layout{
+        grid-template-columns:1fr;
+    }
+
+    .event-map iframe{
+        height:350px;
+    }
+
+}
+
+/* Celular */
+
+@media (max-width: 768px){
+
+    .event-layout{
+        gap:25px;
+    }
+
+    .event-map iframe{
+        height:280px;
+    }
+
+    .mini-map-btn{
+        width:100%;
+        text-align:center;
+        display:block;
+    }
+
+}
+
+.map-container{
+    margin-top:15px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+.map-container iframe{
+    width:100%;
+    height:300px;
+    border:none;
+}
+
+.mini-map-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    background:#b7cde8;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.mini-map-btn:hover{
+    transform:translateY(-3px);
+}
+
+
+
+/* ==========================
+   BOTONES
+========================== */
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 40px 20px;
+}
+
+.action-btn {
+    text-decoration: none;
+    text-align: center;
+
+    padding: 18px;
+
+    border-radius: 40px;
+
+    color: white;
+    font-weight: 600;
+}
+
+.map-btn {
+    background: #f0bf56;
+}
+
+.whatsapp-btn {
+    background: #6bcf81;
+}
+
+/* ==========================
+   GALERIA
+========================== */
+
+.gallery {
+    padding: 100px 20px;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.photo-card {
+    height: 300px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #b8d4c0, #b7cde8, #e8c27f, #c7aedb);
+    opacity: .7;
+}
+
+/* ==========================
+   PERSONAJES DECORATIVOS
+========================== */
+
+.floating-character {
+    position: absolute;
+    width: 80px;
+    opacity: .85;
+}
+
+.tweety {
+    top: 20px;
+    left: 10px;
+}
+
+.lola {
+    top: 30px;
+    right: 10px;
+}
+
+/* ==========================
+   FINAL
+========================== */
+
+.final-section {
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.final-section h2 {
+    color: #666;
+}
+
+.final-section p {
+    margin-top: 15px;
+    color: #777;
+}
+
+.hearts {
+    margin-top: 25px;
+    font-size: 2rem;
+}
+
+.footer-character {
+    width: 90px;
+    position: absolute;
+}
+
+.left-footer {
+    left: 10px;
+    bottom: 20px;
+}
+
+.right-footer {
+    right: 10px;
+    bottom: 20px;
+}
+
+/* ==========================
+   MUSICA
+========================== */
+
+#musicBtn {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #7aa5e6;
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, .15);
+}
+
+/* ==========================
+   ANIMACIONES
+========================== */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+/* ==========================
+   TABLET Y PC
+========================== */
+
+@media(min-width:768px) {
+
+    .countdown {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 800px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 170px;
+    }
+
+    .baby-name {
+        font-size: 6rem;
+    }
+
+}
+
+
+.rsvp-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.rsvp-card {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.rsvp-card input[type="text"] {
+    padding: 15px;
+    border: 2px solid #ececec;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+#confirmAttendance {
+    border: none;
+    padding: 18px;
+    border-radius: 40px;
+    background: #7aa5e6;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#successMessage {
+    margin-top: 10px;
+    color: #4caf50;
+    font-weight: 600;
+}
+/* ==========================
+   MESA DE REGALOS
+========================== */
+
+.gift-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.gift-section h2 {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.gift-card {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.gift-image {
+    width: 220px;
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    filter: drop-shadow(
+        0 10px 15px rgba(0,0,0,.12)
+    );
+}
+
+.gift-card p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.gift-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 16px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #7aa5e6,
+        #b998ff
+    );
+
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 40px;
+
+    transition: .3s;
+}
+
+.gift-btn:hover {
+    transform: translateY(-3px);
+}

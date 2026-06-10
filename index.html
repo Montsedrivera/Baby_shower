@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shower | Nombre</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Sacramento&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- PANTALLA INICIAL -->
+
+    <section id="welcomeScreen">
+
+        <div class="welcome-content">
+
+            <img src="imagenes/Portada.png" class="welcome-group" alt="Baby Looney Tunes">
+
+            <!-- <h1>¡Encontraste un tesoro!</h1> -->
+
+            <!-- <h2>Nombre</h2> -->
+
+            <p>
+                Te invitamos a ser parte de este momento tan especial.
+            </p>
+
+            <button id="openInvitation">
+                Abrir invitación ✨
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <div id="mainContent">
+
+        <!-- Música -->
+
+        <audio id="bgMusic" loop>
+            <source src="music/Cancion.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Nubes -->
+
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="cloud cloud4"></div>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-characters">
+
+                <img src="img/coyote.png" class="hero-left" alt="Coyotito">
+
+                <img src="img/roadrunner.png" class="hero-right" alt="Lucas">
+
+            </div>
+
+            <h3 class="subtitle">
+                Baby Shower de
+            </h3>
+
+            <h1 class="baby-name">
+                NOMBRE
+            </h1>
+
+            <p class="message">
+                Un pequeño milagro está en camino y queremos celebrarlo contigo.
+            </p>
+
+            <img src="img/group.png" class="group-image" alt="Baby Looney Tunes">
+
+            <button class="btn-scroll">
+                Descubrir Invitación ✨
+            </button>
+
+        </section>
+
+        <!-- CUENTA REGRESIVA -->
+
+        <section class="countdown-section">
+
+            <h2>
+                Faltan...
+            </h2>
+
+            <div class="countdown">
+
+                <div class="box">
+                    <span id="days">00</span>
+                    <small>Días</small>
+                </div>
+
+                <div class="box">
+                    <span id="hours">00</span>
+                    <small>Horas</small>
+                </div>
+
+                <div class="box">
+                    <span id="minutes">00</span>
+                    <small>Minutos</small>
+                </div>
+
+                <div class="box">
+                    <span id="seconds">00</span>
+                    <small>Segundos</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BANNER -->
+
+        <section class="banner-section">
+
+            <img src="img/banner.png" class="banner-image" alt="Baby Looney Tunes">
+
+        </section>
+
+        <!-- DETALLES -->
+
+        <section class="event-info">
+
+            <img src="img/tweety.png" class="floating-character tweety" alt="">
+            <img src="img/lola.png" class="floating-character lola" alt="">
+
+            <h2>
+                Detalles del Evento
+            </h2>
+            <div class="card">
+                <div class="event-layout">
+
+                    <div class="event-details">
+
+                        <div class="item">
+                            <span>📅</span>
+                            <p>22 de Agosto de 2026</p>
+                        </div>
+
+                        <div class="item">
+                            <span>🕒</span>
+                            <p>3:00 PM</p>
+                        </div>
+
+                        <div class="item">
+                            <span>📍</span>
+                            <p>
+                                Av. Ignacio Zaragoza 180<br>
+                                Quintas de la Hacienda 2<br>
+                                Soledad de Graciano Sánchez<br>
+                                San Luis Potosí
+                            </p>
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/j4LveeWtVeViv7r26" target="_blank" class="mini-map-btn"
+                            class="margin-left: 20%;">
+
+                            📍 Abrir en Google Maps
+
+                        </a>
+
+                    </div>
+
+                    <div class="event-map">
+
+                        <iframe
+                            src="https://maps.google.com/maps?q=Av.%20Ignacio%20Zaragoza%20180%20Soledad%20de%20Graciano%20Sanchez&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--  <div class="card">
+
+                <div class="item">
+                    <span>📅</span>
+                    <p>22 de Agosto de 2026</p>
+                </div>
+
+                <div class="item">
+                    <span>🕒</span>
+                    <p>3:00 PM</p>
+                </div>
+
+            <div class="item">
+                    <span>📍</span>
+                    <p>
+                        Av. Ignacio Zaragoza 180<br>
+                        Quintas de la Hacienda 2<br>
+                        Soledad de Graciano Sánchez<br>
+                        San Luis Potosí
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        BOTONES
+
+        <section class="actions">
+
+            <a href="https://maps.google.com/?q=Av.+Ignacio+Zaragoza+180" target="_blank" class="action-btn map-btn">
+
+                📍 Ver Ubicación
+
+            </a> 
+
+            <div class="item">
+                <span>📍</span>
+
+                <div>
+
+                    <p>
+                        Av. Ignacio Zaragoza 180<br>
+                        Quintas de la Hacienda 2<br>
+                        Soledad de Graciano Sánchez<br>
+                        San Luis Potosí
+                    </p>
+
+                    <div class="map-container">
+
+                        <iframe
+                            src="https://maps.google.com/maps?q=Av.%20Ignacio%20Zaragoza%20180%20Soledad%20de%20Graciano%20Sanchez&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            loading="lazy" allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <a href="https://maps.google.com/?q=Av.+Ignacio+Zaragoza+180" target="_blank" class="mini-map-btn">
+
+                        📍 Abrir en Google Maps
+
+                    </a>
+
+                </div>
+
+            </div>
+
+    </div>-->
+
+
+
+            <section class="rsvp-section">
+
+                <h2>Confirma tu asistencia 💛</h2>
+
+                <div class="rsvp-card">
+
+                    <label>
+                        <input type="radio" name="attendance" value="Si asistire" checked>
+                        Sí asistiré 🎉
+                    </label>
+
+                    <label>
+                        <input type="radio" name="attendance" value="No asistire">
+                        No podre asistir 😢
+                    </label>
+
+                    <input type="text" id="guestNames" placeholder="Nombre(s) de los asistentes">
+
+                    <button id="confirmAttendance">
+                        Confirmar asistencia
+                    </button>
+
+                    <div id="successMessage"></div>
+
+                </div>
+
+            </section>
+
+        </section>
+        <section class="gift-section">
+
+            <h2>🎁 Mesa de Regalos</h2>
+
+            <div class="gift-card">
+
+                <img src="imagenes/Regalos.png" class="gift-image" width="500px" alt="Mesa de Regalos">
+
+                <p>
+                    Tu asistencia y cariño son el mejor regalo para nosotros. 💛
+                </p>
+
+                <p>
+                    Si además deseas tener un detalle para nuestro pequeño, puedes llevar un regalo físico o visitar
+                    nuestra mesa de regalos, donde encontrarás algunas sugerencias.
+                </p>
+
+                <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/52015228" target="_blank"
+                    class="gift-btn">
+                    Ir a Mesa de Regalos
+                </a>
+
+            </div>
+
+        </section>
+        <!-- Galería -->
+        <section class="gallery">
+            <h2> Nuestro Pequeño Milagro 💛 </h2>
+            <div class="gallery-grid">
+                <div class="photo-card"></div>
+                <div class="photo-card"></div>
+                <div class="photo-card"></div>
+            </div>
+        </section>
+
+        <!-- FINAL -->
+
+        <section class="final-section">
+
+            <img src="img/sylvester.png" class="footer-character left-footer" alt="">
+            <img src="img/duck.png" class="footer-character right-footer" alt="">
+
+            <h2>
+                Gracias por acompañarnos
+            </h2>
+
+            <p>
+                Tu presencia hará este día aún más especial.
+            </p>
+
+            <div class="hearts">
+                💙 💛 💚 💜
+            </div>
+
+        </section>
+
+        <!-- BOTÓN MÚSICA -->
+
+        <button id="musicBtn">
+            🎵
+        </button>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
