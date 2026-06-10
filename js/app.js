@@ -64,7 +64,7 @@ openInvitation.addEventListener(
 
         }, 500);
 
-        music.play().catch(() => {});
+        music.play().catch(() => { });
 
         launchConfetti();
 
@@ -318,12 +318,11 @@ window.addEventListener(
             .forEach((cloud, index) => {
 
                 cloud.style.transform =
-                    `translateX(${
-                        scroll *
-                        (
-                            0.05 +
-                            index * 0.02
-                        )
+                    `translateX(${scroll *
+                    (
+                        0.05 +
+                        index * 0.02
+                    )
                     }px)`;
 
             });
@@ -367,8 +366,8 @@ const observer =
     );
 
 document
-.querySelectorAll(
-`
+    .querySelectorAll(
+        `
 .countdown-section,
 .banner-section,
 .event-info,
@@ -376,27 +375,27 @@ document
 .gallery,
 .final-section
 `
-)
-.forEach(section => {
+    )
+    .forEach(section => {
 
-    section.style.opacity = "0";
+        section.style.opacity = "0";
 
-    section.style.transform =
-        "translateY(40px)";
+        section.style.transform =
+            "translateY(40px)";
 
-    section.style.transition =
-        "all .8s ease";
+        section.style.transition =
+            "all .8s ease";
 
-    observer.observe(section);
+        observer.observe(section);
 
-});
+    });
 
 const confirmAttendance =
     document.getElementById(
         "confirmAttendance"
     );
 
-if(confirmAttendance){
+if (confirmAttendance) {
 
     confirmAttendance.addEventListener(
         "click",
@@ -407,7 +406,7 @@ if(confirmAttendance){
                     "guestNames"
                 ).value.trim();
 
-            if(!names){
+            if (!names) {
 
                 alert(
                     "Por favor escribe tu nombre."
@@ -437,28 +436,29 @@ if(confirmAttendance){
                 attendance
             );
 
-            try{
+            try {
 
                 await fetch(
                     formURL,
                     {
-                        method:"POST",
-                        mode:"no-cors",
-                        body:formData
+                        method: "POST",
+                        mode: "no-cors",
+                        body: formData
                     }
                 );
 
-                document.getElementById(
-                    "successMessage"
-                ).innerHTML =
-                    "✅ ¡Gracias por confirmar tu asistencia!";
+                document.getElementById("successMessage").innerHTML =
+                    attendance === "Si asistire"
+                        ? "✅ ¡Gracias por confirmar tu asistencia!"
+                        : "💛 Gracias por avisarnos. Te extrañaremos y esperamos verte pronto.";
+
 
                 document.getElementById(
                     "guestNames"
                 ).value = "";
 
             }
-            catch(error){
+            catch (error) {
 
                 alert(
                     "Ocurrió un error al enviar la información."
