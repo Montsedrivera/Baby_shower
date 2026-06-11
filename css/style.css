@@ -346,6 +346,13 @@ body {
     margin-bottom: 20px;
 }
 
+.venue-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7aa5e6;
+    margin-bottom: 8px;
+}
+
 .item span {
     font-size: 1.5rem;
 }
@@ -364,6 +371,9 @@ body {
 
 .event-details {
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .event-map {
@@ -376,6 +386,41 @@ body {
     border: none;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.venue-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #7aa5e6;
+    margin-bottom: 8px;
+}
+
+.mini-map-btn {
+    display: block;
+
+    width: 250px;
+
+    margin: 35px auto 0;
+
+    padding: 14px 20px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    background: #b7cde8;
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.mini-map-btn:hover {
+    transform: translateY(-3px);
 }
 
 /* Tablet */
@@ -507,20 +552,91 @@ body {
    PERSONAJES DECORATIVOS
 ========================== */
 
-.floating-character {
+.event-info {
+    padding: 80px 20px;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes floatTweety {
+
+    0%,
+    100% {
+        transform: rotate(10deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(10deg) translateY(-12px);
+    }
+
+}
+
+@keyframes floatSylvester {
+
+    0%,
+    100% {
+        transform: rotate(-10deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-10deg) translateY(-12px);
+    }
+
+}
+
+/* Piolín detrás de la tarjeta */
+
+.event-tweety {
     position: absolute;
-    width: 80px;
-    opacity: .85;
+
+    width: 150px;
+
+    top: 50px;
+
+    right: calc(48% - 430px);
+
+    z-index: 1;
+
+    animation: floatTweety 4s ease-in-out infinite;
+
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, .15));
 }
 
-.tweety {
-    top: 20px;
-    left: 10px;
+/* Silvestre escondido */
+
+.event-sylvester {
+    position: absolute;
+
+    width: 200px;
+
+    left: calc(46% - 430px);
+
+    top: 480px;
+    z-index: 1;
+
+    animation: floatSylvester 4s ease-in-out infinite;
+
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .18));
 }
 
-.lola {
-    top: 30px;
-    right: 10px;
+@media (max-width: 768px) {
+
+    .event-tweety {
+        width: 100px;
+        top: -25px;
+        right: -10px;
+    }
+
+    .event-sylvester {
+        width: 110px;
+        bottom: -20px;
+        left: -10px;
+    }
+
 }
 
 /* ==========================
