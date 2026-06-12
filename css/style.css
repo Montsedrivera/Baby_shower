@@ -52,7 +52,7 @@ body {
 
 .welcome-group {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     margin-bottom: 0px;
 }
 
@@ -234,13 +234,21 @@ body {
 
 .group-image {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     margin-bottom: 25px;
 
     filter:
         drop-shadow(0 15px 20px rgba(0, 0, 0, .15));
 }
 
+.group-image2 {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+
+    filter:
+        drop-shadow(0 15px 20px rgba(0, 0, 0, .15));
+}
 .btn-scroll {
     border: none;
     padding: 15px 30px;
@@ -248,6 +256,8 @@ body {
     background: #7aa5e6;
     color: white;
     cursor: pointer;
+    margin-top: -70px;
+    z-index: 1;
 }
 
 /* ==========================
@@ -303,11 +313,12 @@ body {
 
 .banner-section {
     text-align: center;
-    padding: 20px;
+    margin-top: -60px;
+    /* padding: 20px; */
 }
 
 .banner-image {
-    width: 85%;
+    width: 100%;
     max-width: 320px;
 }
 
@@ -317,6 +328,7 @@ body {
 
 .event-info {
     padding: 80px 20px;
+    margin-top: -60px;
     position: relative;
 }
 
@@ -445,9 +457,13 @@ body {
         gap: 25px;
     }
 
-    .event-map iframe {
-        height: 280px;
+    .event-map img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
+
+}
 
     .mini-map-btn {
         width: 100%;
@@ -455,7 +471,7 @@ body {
         display: block;
     }
 
-}
+
 
 .map-container {
     margin-top: 15px;
@@ -524,9 +540,9 @@ body {
    GALERIA
 ========================== */
 
-.gallery {
-    padding: 100px 20px;
-}
+/* .gallery {
+    padding: 10px 20px;
+} */
 
 .gallery h2 {
     text-align: center;
@@ -593,9 +609,9 @@ body {
 .event-tweety {
     position: absolute;
 
-    width: 150px;
+    width: 200px;
 
-    top: 50px;
+    top: 280px;
 
     right: calc(48% - 430px);
 
@@ -613,9 +629,9 @@ body {
 
     width: 200px;
 
-    left: calc(46% - 430px);
+    left: calc(53% - 430px);
 
-    top: 480px;
+    top: 900px;
     z-index: 1;
 
     animation: floatSylvester 4s ease-in-out infinite;
@@ -623,18 +639,21 @@ body {
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .18));
 }
 
+
+
 @media (max-width: 768px) {
 
     .event-tweety {
-        width: 100px;
-        top: -25px;
-        right: -10px;
+        width: 90px;
+        top: -30px;
+        right: 30px;
     }
 
     .event-sylvester {
-        width: 110px;
-        bottom: -20px;
-        left: -10px;
+        width: 90px;
+        left: 10px;
+        top: auto;
+        bottom: -40px;
     }
 
 }
@@ -644,7 +663,8 @@ body {
 ========================== */
 
 .final-section {
-    padding: 100px 20px;
+    padding: 40px 20px;
+    margin-top: 30px;
     text-align: center;
     position: relative;
 }
@@ -751,7 +771,7 @@ body {
 
 
 .rsvp-section {
-    padding: 80px 20px;
+    margin-top: 60px;
     text-align: center;
 }
 
@@ -795,7 +815,7 @@ body {
    MESA DE REGALOS
 ========================== */
 
-.gift-section {
+/* .gift-section {
     padding: 80px 20px;
     text-align: center;
 }
@@ -848,46 +868,120 @@ body {
 
 .gift-btn:hover {
     transform: translateY(-3px);
-}
+} */
 
 /* ==========================
-   MENSAJE DE LOS PAPÁS
+   RESPONSIVE EXTRA
 ========================== */
 
-.parents-section {
-    padding: 20px 20px 40px;
-    display: flex;
-    justify-content: center;
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .hero-characters {
+        max-width: 280px;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 80px;
+    }
+
+    .baby-name {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .message {
+        font-size: .95rem;
+        padding: 0 10px;
+    }
+
+    .group-image {
+        max-width: 220px;
+    }
+
+    .group-image2 {
+        max-width: 100%;
+    }
+
+    .btn-scroll {
+        margin-top: -30px;
+    }
+
+    /* Tarjetas */
+    .card {
+        padding: 20px;
+    }
+
+    .item {
+        gap: 10px;
+    }
+
+    .item span {
+        font-size: 1.2rem;
+    }
+
+    /* Cuenta regresiva */
+    .box {
+        padding: 20px 10px;
+    }
+
+    .box span {
+        font-size: 1.5rem;
+    }
+
+    /* RSVP */
+    .rsvp-card {
+        padding: 20px;
+    }
+
+    /* Footer */
+    .footer-character {
+        width: 60px;
+    }
+
+    /* Nubes más pequeñas */
+    .cloud1,
+    .cloud2,
+    .cloud3,
+    .cloud4 {
+        transform: scale(.7);
+    }
+
 }
 
-.parents-card {
-    max-width: 700px;
-    background: rgba(255, 255, 255, .8);
-    backdrop-filter: blur(8px);
-    border-radius: 30px;
-    padding: 35px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+@media (max-width: 768px) {
+
+    .event-tweety {
+        width: 70px;
+        top: -20px;
+        right: 10px;
+    }
+
+    .event-sylvester {
+        width: 70px;
+        bottom: -20px;
+        left: 10px;
+    }
+
 }
 
-.baby-greeting {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #7d5a50;
-    margin-bottom: 20px;
-}
+@media (max-width: 768px) {
 
-.baby-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #6b5e57;
-    margin-bottom: 15px;
-}
+    .gallery-grid {
+        flex-direction: column;
+    }
 
-.special {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #d18b47;
-    margin-top: 25px;
+    .gallery-grid {
+        width: 85%;
+    }
+
 }
