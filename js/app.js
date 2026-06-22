@@ -471,3 +471,30 @@ if (confirmAttendance) {
 
 }
 
+const swiper = new Swiper(".mySwiper", {
+
+    effect: "coverflow",
+
+    grabCursor: true,
+
+    centeredSlides: true,
+
+    slidesPerView: "auto",
+
+    loop: true,
+
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+
+    coverflowEffect: {
+        rotate: 0,
+        stretch: -20,
+        depth: 120,
+        modifier: 1,
+        scale: 0.9,
+        slideShadows: false
+    }
+
+});
