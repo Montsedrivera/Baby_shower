@@ -572,6 +572,526 @@ body {
             #e7b6ca);
 }
 
+
+/* ==========================
+   ITINERARIO
+========================== */
+
+.itinerary-section {
+    margin: 60px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.timeline {
+    margin-top: 30px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.timeline-time {
+    min-width: 90px;
+    font-weight: 700;
+    color: #e7b6ca;
+}
+
+.timeline-content {
+    flex: 1;
+    background: #fff;
+    padding: 14px 18px;
+    border-radius: 18px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(169, 199, 238, .12);
+}
+
+.timeline-content i {
+    color: #a9c7ee;
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+
+.itinerary-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.timeline {
+    max-width: 700px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 110px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #a9c7ee;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.timeline-time {
+    width: 90px;
+    font-weight: bold;
+    color: #e7b6ca;
+}
+
+.timeline-content {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(169, 199, 238, .12);
+    margin-left: 30px;
+    flex: 1;
+    text-align: left;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 104px;
+    width: 15px;
+    height: 15px;
+    background: #ffe49a;
+    border-radius: 50%;
+}
+
+/* ==========================
+   RSVP
+========================== */
+/* ==========================
+   RSVP
+========================== */
+
+.rsvp-section {
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.rsvp-section h2 {
+    margin-bottom: 25px;
+    color: #7d7d7d;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* ==========================
+   TARJETA
+========================== */
+
+.rsvp-card {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    border: 2px solid #ffe5ef;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .05);
+}
+
+/* ==========================
+   FILA NOMBRE + BOLETOS
+========================== */
+
+.form-row {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-end;
+
+    margin-bottom: 25px;
+}
+
+.name-group {
+
+    flex: 1;
+}
+
+.tickets-group {
+
+    width: 120px;
+}
+
+/* ==========================
+   LABELS
+========================== */
+
+.field-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+
+    color: #7d7d7d;
+
+    text-align: left;
+
+    font-size: .95rem;
+}
+
+/* ==========================
+   INPUT
+========================== */
+
+#guestName {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    border: 2px solid #f3dbe6;
+
+    border-radius: 16px;
+
+    font-size: 1rem;
+
+    color: #666;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+#guestName:focus {
+
+    border-color: #f3b5cf;
+
+    box-shadow:
+        0 0 0 4px rgba(243, 181, 207, .15);
+}
+
+/* ==========================
+   SELECT
+========================== */
+
+#attendanceQuantity {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100%;
+
+    height: 52px;
+
+    border: 2px solid #f3dbe6;
+
+    border-radius: 16px;
+
+    background:
+        white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath fill='%23999' d='M2 5l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center;
+
+    padding-right: 28px;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    color: #777;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+#attendanceQuantity:hover {
+
+    border-color: #f3b5cf;
+}
+
+#attendanceQuantity:focus {
+
+    border-color: #f3b5cf;
+
+    box-shadow:
+        0 0 0 4px rgba(243, 181, 207, .15);
+}
+
+/* ==========================
+   OPCIONES ASISTENCIA
+========================== */
+
+.attendance-inline {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.option-inline {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    color: #555;
+
+    font-size: 1rem;
+
+    transition: .3s;
+}
+
+.option-inline:hover {
+
+    color: #333;
+}
+
+.option-inline input {
+
+    accent-color: #f4a8c4;
+}
+
+/* ==========================
+   BOTÓN
+========================== */
+
+#confirmAttendance {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 50px;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(90deg,
+            #bfd4ff,
+            #f5bdd5);
+
+    transition: .3s;
+}
+
+#confirmAttendance:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(245, 189, 213, .35);
+}
+
+/* ==========================
+   MENSAJE
+========================== */
+
+#successMessage {
+
+    margin-top: 15px;
+
+    font-weight: 600;
+
+    color: #7d7d7d;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 600px) {
+
+    .rsvp-section h2 {
+
+        font-size: 1.8rem;
+
+        margin-bottom: 20px;
+    }
+
+    .rsvp-card {
+
+        width: 92%;
+
+        padding: 20px;
+
+        border-radius: 25px;
+    }
+
+    /* ==========================
+       FORMULARIO
+    ========================== */
+
+    .form-row {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .name-group {
+
+        width: 100%;
+    }
+
+    .tickets-group {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 0 4px;
+    }
+
+    /* Ocultamos label nombre */
+
+    .name-group .field-label {
+
+        display: none;
+    }
+
+    /* Label boletos visible */
+
+    .tickets-group .field-label {
+
+        display: block;
+
+        margin: 0;
+
+        font-size: .9rem;
+
+        font-weight: 600;
+
+        color: #777;
+    }
+
+    #guestName {
+
+        width: 100%;
+
+        height: 48px;
+
+        padding: 0 14px;
+
+        font-size: .95rem;
+    }
+
+    #attendanceQuantity {
+
+        width: 90px;
+
+        height: 44px;
+
+        font-size: .95rem;
+    }
+
+    /* ==========================
+       OPCIONES
+    ========================== */
+
+    .attendance-inline {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        margin-bottom: 18px;
+    }
+
+    .option-inline {
+
+        width: 100%;
+
+        font-size: .95rem;
+    }
+
+    /* ==========================
+       BOTÓN
+    ========================== */
+
+    #confirmAttendance {
+
+        width: 100%;
+
+        padding: 15px;
+
+        font-size: .95rem;
+    }
+
+    /* ==========================
+       DECORACIONES
+    ========================== */
+
+    .event-sylvester {
+
+        width: 60px;
+
+        left: -5px;
+
+        bottom: -10px;
+
+        opacity: .85;
+    }
+
+    .heart-decoration,
+    .heart-badge {
+
+        display: none;
+    }
+}
+
 /* ==========================
    GALERÍA COVERFLOW
 ========================== */
@@ -588,10 +1108,18 @@ body {
 
 .mySwiper {
     width: 100%;
-    max-width: 1200px; /* limita el carrusel */
+    max-width: 1200px;
+    /* limita el carrusel */
     margin: 0 auto;
     padding-top: 0px;
     padding-bottom: 0px;
+}
+
+.swiper {
+
+    width: 100%;
+
+    overflow: visible;
 }
 
 .swiper-slide {
@@ -609,7 +1137,7 @@ body {
 
     display: block;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
 }
 
 /* ==========================
@@ -647,11 +1175,12 @@ body {
         height: 200px !important;
     }
 
-      .swiper-slide-active {
+    .swiper-slide-active {
         transform: scale(1.08);
     }
 
 }
+
 /* ==========================
    PERSONAJES DECORATIVOS
 ========================== */
@@ -718,7 +1247,7 @@ body {
 
     left: calc(53% - 430px);
 
-    top: 1300px;
+    top: 130px;
 
     z-index: 1;
 
@@ -733,7 +1262,7 @@ body {
 
     .event-tweety {
         width: 90px;
-        top: -30px;
+        top: 150px;
         right: 30px;
     }
 
@@ -791,10 +1320,14 @@ body {
 ========================== */
 
 #musicBtn {
-    position: fixed;
 
-    bottom: 20px;
-    right: 20px;
+    position: fixed !important;
+
+    bottom: 20px !important;
+
+    right: 20px !important;
+
+    z-index: 999999 !important;
 
     width: 60px;
     height: 60px;
@@ -802,10 +1335,11 @@ body {
     border: none;
     border-radius: 50%;
 
-    background:
-        linear-gradient(135deg,
-            #a9c7ee,
-            #e7b6ca);
+    background: linear-gradient(
+        135deg,
+        #a9c7ee,
+        #e7b6ca
+    );
 
     color: white;
 
@@ -814,10 +1348,8 @@ body {
     cursor: pointer;
 
     box-shadow:
-        0 10px 20px rgba(169, 199, 238, .25);
+        0 10px 20px rgba(169,199,238,.25);
 }
-
-
 /* ==========================
    ANIMACIONES
 ========================== */
@@ -833,60 +1365,6 @@ body {
         transform: translateY(-12px);
     }
 
-}
-
-.itinerary-section {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.timeline {
-    max-width: 700px;
-    margin: 30px auto;
-    position: relative;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 110px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: #a9c7ee;
-}
-
-.timeline-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.timeline-time {
-    width: 90px;
-    font-weight: bold;
-    color: #e7b6ca;
-}
-
-.timeline-content {
-    background: white;
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(169, 199, 238, .12);
-    margin-left: 30px;
-    flex: 1;
-    text-align: left;
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    left: 104px;
-    width: 15px;
-    height: 15px;
-    background: #ffe49a;
-    border-radius: 50%;
 }
 
 /* ==========================
@@ -922,18 +1400,7 @@ body {
     text-align: center;
 }
 
-.rsvp-card {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(169, 199, 238, .12);
 
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
 
 .rsvp-card input[type="text"] {
     padding: 15px;
@@ -942,20 +1409,6 @@ body {
     font-size: 1rem;
 }
 
-#confirmAttendance {
-    border: none;
-    padding: 18px;
-    border-radius: 40px;
-
-    background:
-        linear-gradient(135deg,
-            #a9c7ee,
-            #e7b6ca);
-
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-}
 
 #successMessage {
     margin-top: 10px;
@@ -1046,10 +1499,6 @@ body {
         font-size: 1.5rem;
     }
 
-    /* RSVP */
-    .rsvp-card {
-        padding: 20px;
-    }
 
     /* Footer */
     .footer-character {
@@ -1070,7 +1519,7 @@ body {
 
     .event-tweety {
         width: 70px;
-        top: -20px;
+        top: 750px;
         right: 10px;
     }
 
@@ -1092,44 +1541,4 @@ body {
         width: 85%;
     }
 
-}
-
-
-.itinerary-section {
-    margin: 60px auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-.timeline {
-    margin-top: 30px;
-}
-
-.timeline-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 18px;
-}
-
-.timeline-time {
-    min-width: 90px;
-    font-weight: 700;
-    color: #e7b6ca;
-}
-
-.timeline-content {
-    flex: 1;
-    background: #fff;
-    padding: 14px 18px;
-    border-radius: 18px;
-    text-align: left;
-    box-shadow: 0 5px 15px rgba(169, 199, 238, .12);
-}
-
-.timeline-content i {
-    color: #a9c7ee;
-    margin-right: 12px;
-    width: 20px;
-    text-align: center;
 }

@@ -80,7 +80,7 @@ discoverBtn.addEventListener(
     () => {
 
         document
-            .querySelector(".countdown-section")
+            .querySelector(".event-info")
             .scrollIntoView({
                 behavior: "smooth"
             });
@@ -389,11 +389,49 @@ document
         observer.observe(section);
 
     });
+    
+    // ======================================
+// CONFIGURACIÓN DE LA INVITACIÓN
+// ======================================
+
+const MAX_BOLETOS = 2;
+
+const attendanceQuantity =
+    document.getElementById(
+        "attendanceQuantity"
+    );
 
 const confirmAttendance =
     document.getElementById(
         "confirmAttendance"
     );
+
+// ======================================
+// LLENAR SELECT AUTOMÁTICAMENTE
+// ======================================
+
+let opciones = "";
+
+for (
+    let i = MAX_BOLETOS;
+    i >= 1;
+    i--
+) {
+
+    opciones += `
+        <option value="${i}">
+            ${i}
+        </option>
+    `;
+
+}
+
+attendanceQuantity.innerHTML =
+    opciones;
+
+// ======================================
+// CONFIRMAR ASISTENCIA
+// ======================================
 
 if (confirmAttendance) {
 
@@ -401,19 +439,23 @@ if (confirmAttendance) {
         "click",
         async () => {
 
-            const names =
+            const nombre =
                 document.getElementById(
-                    "guestNames"
+                    "guestName"
                 ).value.trim();
 
-            if (!names) {
+            if (!nombre) {
 
                 alert(
                     "Por favor escribe tu nombre."
                 );
 
                 return;
+
             }
+
+            const boletos =
+                attendanceQuantity.value;
 
             const attendance =
                 document.querySelector(
@@ -426,14 +468,25 @@ if (confirmAttendance) {
             const formData =
                 new FormData();
 
+            // Nombre
+
             formData.append(
                 "entry.1227858822",
-                names
+                nombre
             );
+
+            // Asistencia
 
             formData.append(
                 "entry.868589647",
                 attendance
+            );
+
+            // Número de boletos
+
+            formData.append(
+                "entry.716004991",
+                boletos
             );
 
             try {
@@ -447,22 +500,26 @@ if (confirmAttendance) {
                     }
                 );
 
-                document.getElementById("successMessage").innerHTML =
+                document.getElementById(
+                    "successMessage"
+                ).innerHTML =
                     attendance === "Si asistire"
-                        ? "✅ ¡Gracias por confirmar tu asistencia!"
+                        ? "💗 ¡Gracias por confirmar tu asistencia!"
                         : "💛 Gracias por avisarnos. Te extrañaremos y esperamos verte pronto.";
 
-
                 document.getElementById(
-                    "guestNames"
+                    "guestName"
                 ).value = "";
 
             }
             catch (error) {
 
-                alert(
-                    "Ocurrió un error al enviar la información."
-                );
+                console.error(error);
+
+                document.getElementById(
+                    "successMessage"
+                ).innerHTML =
+                    "✅ Información enviada.";
 
             }
 
@@ -470,18 +527,21 @@ if (confirmAttendance) {
     );
 
 }
+    
 
 const swiper = new Swiper(".mySwiper", {
 
     effect: "coverflow",
 
-    grabCursor: true,
-
     centeredSlides: true,
 
-    slidesPerView: "auto",
+    slidesPerView: 3,
 
     loop: true,
+loopAdditionalSlides: 6,
+    observer: true,
+
+    observeParents: true,
 
     autoplay: {
         delay: 3500,
@@ -498,3 +558,5 @@ const swiper = new Swiper(".mySwiper", {
     }
 
 });
+
+

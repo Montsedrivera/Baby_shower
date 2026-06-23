@@ -42,9 +42,12 @@
     <div id="mainContent">
 
         <!-- Música -->
+         <button id="musicBtn">
+                🎵
+            </button>
 
         <audio id="bgMusic" loop>
-            <source src="music/Cancion.mp3" type="audio/mpeg">
+            <source src="Flying.mp3" type="audio/mpeg">
         </audio>
 
         <!-- Nubes -->
@@ -82,53 +85,13 @@
 
         </section>
 
-        <!-- CUENTA REGRESIVA -->
-
-        <section class="countdown-section">
-
-            <h2 class="countdown-title">
-                ✨ Para el baby shower de Diana Lucia faltan... ✨
-            </h2>
-            <div class="countdown">
-
-                <div class="box">
-                    <span id="days">00</span>
-                    <small>Días</small>
-                </div>
-
-                <div class="box">
-                    <span id="hours">00</span>
-                    <small>Horas</small>
-                </div>
-
-                <div class="box">
-                    <span id="minutes">00</span>
-                    <small>Minutos</small>
-                </div>
-
-                <div class="box">
-                    <span id="seconds">00</span>
-                    <small>Segundos</small>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- BANNER -->
-
-        <section class="banner-section">
-
-            <img src="imagenes/tiempo.png" class="banner-image" alt="Baby Looney Tunes">
-
-        </section>
-
         <!-- DETALLES -->
 
         <section class="event-info">
             <h2>
                 Detalles del Evento
             </h2>
+            <!-- Detalles del evento -->
             <div class="card">
 
 
@@ -186,6 +149,7 @@
 
             </div>
 
+            <!-- Itinerario -->
             <section class="itinerary-section">
 
                 <h2>✨ Itinerario del Evento ✨</h2>
@@ -229,107 +193,173 @@
 
             </section>
 
+            <!-- RSVP -->
             <section class="rsvp-section">
 
                 <h2>Confirma tu asistencia 💛</h2>
 
                 <div class="rsvp-card">
 
-                    <label>
-                        <input type="radio" name="attendance" value="Si asistire" checked>
-                        Sí asistiré 🎉
-                    </label>
+                    <div class="form-row">
 
-                    <label>
-                        <input type="radio" name="attendance" value="No asistire">
-                        No podre asistir 😢
-                    </label>
+                        <div class="name-group">
 
-                    <input type="text" id="guestNames" placeholder="Nombre(s) de los asistentes">
+                            <label class="field-label">
+                                ✨ Nombre
+                            </label>
+
+                            <input type="text" id="guestName" placeholder="Tu nombre">
+
+                        </div>
+
+                        <div class="tickets-group">
+
+                            <label class="field-label">
+                                🎟️ Boletos
+                            </label>
+
+                            <select id="attendanceQuantity"></select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="attendance-inline">
+
+                        <label class="option-inline">
+
+                            <input type="radio" name="attendance" value="Si asistire" checked>
+
+                            <span>🎉 Sí asistiré</span>
+
+                        </label>
+
+                        <label class="option-inline">
+
+                            <input type="radio" name="attendance" value="No asistire">
+
+                            <span>🥺 No podré asistir</span>
+
+                        </label>
+
+                    </div>
 
                     <button id="confirmAttendance">
                         Confirmar asistencia
                     </button>
+                    <img src="imagenes/sil.png" class="event-sylvester" alt="Silvestre">
 
                     <div id="successMessage"></div>
 
                 </div>
-                <img src="imagenes/sil.png" class="event-sylvester" alt="Silvestre">
 
             </section>
 
-        </section>
-        <!-- Galeria -->
-        <section class="gallery">
+            
+        <!-- CUENTA REGRESIVA -->
 
-            <h2>Nuestro Pequeño Milagro 💛</h2>
+        <section class="countdown-section">
 
-            <div class="swiper mySwiper">
+            <h2 class="countdown-title">
+                ✨ Para el baby shower de Diana Lucia faltan... ✨
+            </h2>
+            <div class="countdown">
 
-                <div class="swiper-wrapper">
+                <div class="box">
+                    <span id="days">00</span>
+                    <small>Días</small>
+                </div>
 
-                    <div class="swiper-slide">
-                        <img src="imagenes/1.jpeg" alt="">
-                    </div>
+                <div class="box">
+                    <span id="hours">00</span>
+                    <small>Horas</small>
+                </div>
 
-                    <div class="swiper-slide">
-                        <img src="imagenes/2.jpeg" alt="">
-                    </div>
+                <div class="box">
+                    <span id="minutes">00</span>
+                    <small>Minutos</small>
+                </div>
 
-                    <div class="swiper-slide">
-                        <img src="imagenes/3.jpeg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="imagenes/1.jpeg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="imagenes/2.jpeg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="imagenes/3.jpeg" alt="">
-                    </div><div class="swiper-slide">
-                        <img src="imagenes/1.jpeg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="imagenes/2.jpeg" alt="">
-                    </div>
-
-                    <div class="swiper-slide">
-                        <img src="imagenes/3.jpeg" alt="">
-                    </div>
-
+                <div class="box">
+                    <span id="seconds">00</span>
+                    <small>Segundos</small>
                 </div>
 
             </div>
 
         </section>
-        <!-- FINAL -->
 
-        <section class="final-section">
+        <!-- BANNER -->
 
-            <h2>
-                Gracias por acompañarnos
-            </h2>
-            <img src="imagenes/gracias.png" class="group-image2" alt="Baby Looney Tunes">
-            <p>
-                Tu presencia hará este día aún más especial.
-            </p>
+        <section class="banner-section">
 
-            <div class="hearts">
-                💙 💛 💚 💜
-            </div>
+            <img src="imagenes/tiempo.png" class="banner-image" alt="Baby Looney Tunes">
 
         </section>
 
-        <!-- BOTÓN MÚSICA -->
 
-        <button id="musicBtn">
-            🎵
-        </button>
+            <!-- Galeria -->
+            <section class="gallery">
+
+                <h2>Nuestro Pequeño Milagro 💛</h2>
+
+                <div class="swiper mySwiper">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="imagenes/1.jpeg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="imagenes/2.jpeg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="imagenes/3.jpeg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="imagenes/5.jpeg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="imagenes/6.jpeg" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="imagenes/4.jpeg" alt="">
+                        </div>
+                       
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- FINAL -->
+
+            <section class="final-section">
+
+                <h2>
+                    Te esperamos!💛
+                </h2>
+                <img src="imagenes/gracias.png" class="group-image2" alt="Baby Looney Tunes">
+                <p>
+                    Tu presencia hará este día aún más especial.
+                </p>
+
+                <div class="hearts">
+                    💙 💛 💚 💜
+                </div>
+
+            </section>
+
+            <!-- BOTÓN MÚSICA
+
+            <button id="musicBtn">
+                🎵
+            </button> -->
 
     </div>
 
@@ -337,7 +367,7 @@
 
     <script src="js/app.js"></script>
 
-
+ 
 </body>
 
 </html>
